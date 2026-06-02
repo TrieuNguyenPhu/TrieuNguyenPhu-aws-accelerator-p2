@@ -1,0 +1,29 @@
+# ==========================================
+# 1. BẢO MẬT: Chặn các file SSH Key nhạy cảm
+# ==========================================
+# Chặn đích danh file khóa bí mật (Private Key)
+keypair/demo-key
+
+# Hoặc chặn toàn bộ file trong thư mục keypair để đảm bảo an toàn tuyệt đối
+# keypair/
+
+# ==========================================
+# 2. TERRAFORM: Chặn các file cấu hình local và trạng thái
+# ==========================================
+# Chặn thư mục chứa plugin đã tải về (.terraform)
+.terraform/
+
+# Chặn file lưu trạng thái hạ tầng (chứa thông tin bảo mật của AWS)
+*.tfstate
+*.tfstate.*
+
+# Chặn các file biến môi trường local (nếu bạn có dùng)
+*.tfvars
+*.tfvars.json
+
+# Chặn file log khi chạy lệnh crash
+crash.log
+crash.*.log
+
+# Chặn file khóa trạng thái khi đang áp dụng cấu hình
+.terraform.lock.hcl
