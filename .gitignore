@@ -1,0 +1,15 @@
+# Ignore course materials, slides, and recordings
+learners/
+
+# Ignore local Terraform directories and state files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
